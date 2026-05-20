@@ -107,17 +107,18 @@ The robot must complete **3 laps** while:
 
 ## 🤖 Robot Specifications
 
-| Specification | Details |
-|--------------|---------|
-| **Main Controller** | Raspberry Pi 5 |
-| **Co-Processor** | ESP32 / Arduino (IMU + Encoder data over UART) |
-| **Drive Motor** | DC Brushed Motor (GPIO 12, PWM 55 Hz) |
-| **Steering Servo** | Standard RC Servo (GPIO 8, PWM 50 Hz) |
-| **Distance Sensors** | 4× TFMini LiDAR (front, left, right, back) + RPLidar A1 (360°) |
-| **IMU** | BNO085 9-DoF (heading, color sensing) |
-| **Camera** | USB Camera (640×360 @ 120 FPS) |
-| **Custom PCB** | Yes — designed for this robot |
-| **Operating Voltage** | 7.4 V LiPo (motor) / 5 V (logic) |
+| Preview | Specification | Details |
+|---------|--------------|---------|
+|<img src="others/raspi_4b.jpg" width="150" height="150">| Main Controller | Raspberry Pi 5 |
+|<img src="others/arduino_mega.jpg" width="150" height="150">| **Co-Processor** | ESP32 / Arduino (IMU + Encoder data over UART) |
+|<img src="others/motor.jpg" width="150" height="150">| **Drive Motor** | DC Brushed Motor (GPIO 12, PWM 55 Hz) |
+|<img src="others/servo.jpg" width="150" height="150">| **Steering Servo** | Standard RC Servo (GPIO 8, PWM 50 Hz) |
+|<img src="others/tfmini.jpg" width="150" height="150">| **Distance Sensors** | 4× TFMini LiDAR (front, left, right, back) |
+|<img src="others/Lidar.jpg" width="150" height="150">| **Mapping Sensors** | RPLidar C1 (360°) |
+|<img src="others/bno085.jpg" width="150" height="150">| **IMU** | BNO085 9-DoF (heading, color sensing) |
+|<img src="others/arduino_mega.jpg" width="150" height="150">| **Camera** | USB Camera (640×360 @ 120 FPS) |
+|<img src="others/custom_pcb.jpg" width="150" height="150">| **Custom PCB** | Yes — designed for this robot |
+|<img src="others/battery.jpg" width="150" height="150">| **Operating Voltage** | 12 V LiPo (motor) / 5 V (logic) |
 | **Communication** | UART 115200 baud (Pi ↔ ESP32), pigpio bitbang (TFMini), serial 460800 (RPLidar) |
 
 <div align="center">
