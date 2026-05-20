@@ -161,8 +161,8 @@ One of the most significant engineering decisions was designing and manufacturin
     <td align="center"><b>Bill of Materials (BOM)</b></td>
   </tr>
   <tr>
-    <td><img src="schemes/schematic.png" width="500"></td>
-    <td><img src="schemes/bom.png" width="500"></td>
+    <td><img src="schemes/custom_pcb.jpg" width="500"></td>
+    <td><img src="schemes/schematic.jpg" width="500"></td>
   </tr>
 </table>
 
