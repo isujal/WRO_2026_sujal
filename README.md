@@ -80,36 +80,12 @@ Both challenges are Time Attack format — one vehicle at a time, scored on laps
 <div align="center">
 
 <table>
-  <tr>
-    <td align="center"><b>Front View</b></td>
-    <td align="center"><b>Rear View</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="v-photos/front.jpeg" width="200" height="300"></td>
-    <td align="center"><img src="v-photos/rear.jpeg" width="200" height="300"></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Left Side</b></td>
-    <td align="center"><b>Right Side</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="v-photos/left.jpeg" width="200" height="300"></td>
-    <td align="center"><img src="v-photos/right.jpeg" width="200" height="300"></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Top View</b></td>
-    <td align="center"><b>Bottom View</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="v-photos/top.jpeg" width="200" height="300"></td>
-    <td align="center"><img src="v-photos/bottom.jpeg" width="200" height="300"></td>
-  </tr>
-  <tr>
+    <tr>
     <td colspan="2" align="center"><b>Labeled Component View</b></td>
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="schemes/isometric_1.jpg" width="720" height="250">
+      <img src="schemes/isometric_1.jpg" width="600" height="500">
     </td>
   </tr>
 </table>
@@ -121,16 +97,16 @@ Both challenges are Time Attack format — one vehicle at a time, scored on laps
 
 | Parameter | Value |
 |-----------|-------|
-| **Dimensions** | [L] × [W] × [H] mm |
-| **Weight** | ~[X] kg |
+| **Dimensions** | 150 × 80 × 150 mm |
+| **Weight** | 0.93 kg |
 | **Drive Type** | Rear-wheel drive with 12V DC geared motor |
-| **Steering** | Servo-actuated Ackermann geometry |
+| **Steering** | Servo-actuated Pivoted geometry |
 | **Primary Brain** | Raspberry Pi 4 Model B (4 GB) |
 | **Co-processor** | Arduino Mega 2560 (sensor I/O + IMU) |
 | **Vision** | HIKVISION DS-U02 USB Camera + Edge TPU ML model |
 | **Spatial Awareness** | RPLidar C1 (360°) + 4× TFmini Plus (point ranging) |
-| **Heading** | Adafruit BNO055 9-DOF IMU |
-| **Max Operating Speed** | ~95% PWM duty cycle (~[X] m/s measured) |
+| **Heading** | Adafruit BNO085 9-DOF IMU |
+| **Max Operating Speed** | ~95% PWM duty cycle  |
 
 ---
 
@@ -141,24 +117,24 @@ Both challenges are Time Attack format — one vehicle at a time, scored on laps
 | Component | Image | Specifications | Role in Robot | Source |
 |-----------|-------|---------------|---------------|--------|
 | **Raspberry Pi 4 Model B (4GB)** |<img src="others/raspi_4b.jpg" width="150" height="150"> | Quad-core Cortex-A72 @ 1.8GHz, 4 GB LPDDR4, USB 3.0, GPIO 40-pin | Main compute — runs vision (Edge TPU ML), LiDAR parsing, servo/motor PID control via pigpio | [robu.in](https://robu.in/product/raspberry-pi-4-model-b-with-4-gb-ram/) |
-| **Arduino Mega 2560** | <img src="others/arduino_mega.jpg" width="150" height="150"> | ATmega2560 @ 16MHz, 54 digital I/O, 4× UART, 16 analog inputs | Co-processor — reads BNO055 IMU + encoder, broadcasts fused heading+counts to Pi at 115200 baud over UART | [robu.in](https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/) |
+| **Arduino Mega 2560** | <img src="others/arduino_mega.jpg" width="150" height="150"> | ATmega2560 @ 16MHz, 54 digital I/O, 4× UART, 16 analog inputs | Co-processor — reads BNO085 IMU + encoder, broadcasts fused heading+counts to Pi at 115200 baud over UART | [robu.in](https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/) |
 | **SLAMTEC RPLidar C1M1-R2** | <img src="others/Lidar.jpg" width="150" height="150"> | 360° DTOF, 12m range, 5000 samples/sec, 0.72° angular resolution, 10Hz scan rate | Wall proximity for turn detection (lidar_f, lidar_l, lidar_r shared values); turn triggered when front <950mm and open side >1500mm | [robu.in](https://robu.in/product/rplidar-c1m1-r2-portable-tof-laser-scanner-kit-12m-range/) |
 | **TFmini Plus (×4)** | <img src="others/tfmini.jpg" width="150" height="150"> | Range: 0.1–12m, Accuracy: ±5cm (<6m), ±1% (>6m), UART 115200 baud, 100–1000Hz, IP65 | Point-range sensors: Head (front obstacle), Left, Right (wall following + parking detection), Back (reverse maneuvers) | [robu.in](https://robu.in/product/tfmini-plus-lidar-distance-sensor-for-drones-uav-uas-robots-12m/) |
-| **Adafruit BNO055 IMU** | <img src="others/bno085.jpg" width="150" height="150"> | 9-DOF (accel + gyro + mag), onboard ARM Cortex-M0 fusion, Euler output at 100Hz, I2C | Absolute heading for PID steering correction; prevents drift accumulation across all 3 laps | [robu.in](https://robu.in/product/adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055-stemma-qt-qwiic/) |
+| **Adafruit BNO085 IMU** | <img src="others/bno085.jpg" width="150" height="150"> | 9-DOF (accel + gyro + mag), onboard ARM Cortex-M0 fusion, Euler output at 100Hz, I2C | Absolute heading for PID steering correction; prevents drift accumulation across all 3 laps | [robu.in](https://robu.in/product/adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055-stemma-qt-qwiic/) |
 | **HIKVISION DS-U02 Camera** | <img src="others/camera.jpg" width="150" height="150"> | 2MP, 1080P @ 30fps, ultra-wide angle, USB 2.0, manual focus, distortion correction | Input for Edge TPU object detection (red/green/pink pillars); also provides colour confirmation for lap direction detection | [amazon.in](https://www.amazon.in/HIKVISION-DS-U02-Distortion-Adjustment-Conferencing/dp/B0929FSQ2J) |
-| **Orange 12V 600RPM Johnson Motor** | <img src="others/motor.jpg" width="150" height="150"> | 12V DC, 600 RPM, torque 4.5 kg·cm (15.1 N·cm), metal planetary gearbox, encoder-compatible rear shaft, 6mm D-shaft | Rear-wheel drive; encoder rear-shaft used for distance tracking (odometry) | [robu.in](https://robu.in/product/grade-a-quality-orange-12v-600-rpm-johnson-geared-dc-motor/) |
+| **12V 600RPM Johnson Motor** | <img src="others/motor.jpg" width="150" height="150"> | 12V DC, 600 RPM, torque 4.5 kg·cm (15.1 N·cm), metal planetary gearbox, encoder-compatible rear shaft, 6mm D-shaft | Rear-wheel drive; encoder rear-shaft used for distance tracking (odometry) | [robu.in](https://robu.in/product/grade-a-quality-orange-12v-600-rpm-johnson-geared-dc-motor/) |
 ---
 
 ### 🖨️ Custom PCB — Design & Purpose
 
-One of the most significant engineering decisions was designing and manufacturing a **custom PCB** specifically for this robot rather than using breadboards or loose dupont wires. The PCB was designed in **EasyEDA** and is the central nervous system of the robot — routing every GPIO signal from the Raspberry Pi 40-pin header to sensors, actuators, and sub-modules through permanently soldered, clearly labeled connections. This eliminates the most common competition failure mode: loose wires disconnecting under vibration mid-run.
+One of the most significant engineering decisions was designing and manufacturing a **custom PCB** specifically for this robot rather than using breadboards or loose dupont wires. The PCB was designed in **Altium** and is the central nervous system of the robot — routing every GPIO signal from the Raspberry Pi 40-pin header to sensors, actuators, and sub-modules through permanently soldered, clearly labeled connections. This eliminates the most common competition failure mode: loose wires disconnecting under vibration mid-run.
 
 <div align="center">
 
 <table>
   <tr>
+    <td align="center"><b>PCB Layout</b></td>
     <td align="center"><b>PCB Schematic</b></td>
-    <td align="center"><b>Bill of Materials (BOM)</b></td>
   </tr>
   <tr>
     <td><img src="schemes/custom_pcb.jpg" width="500"></td>
@@ -213,18 +189,19 @@ The robot uses a carefully engineered **dual-rail power architecture** that comp
                                  │ BNO085 IMU (3.3V from RPi)        │
                                  └──────────────────────────────────┘
 ```
+<div align="center">
 
-#### DC-DC Buck Converter Specifications
+<table>
+  <tr>
+    <td align="center"><b>Wiring Diagram</b></td>
+  </tr>
+  <tr>
+    <td><img src="schemes/wiring_diagram.jpg" width="500"></td>
+  </tr>
+</table>
 
-| Parameter | Value |
-|-----------|-------|
-| **Input Voltage Range** | 7V – 28V DC |
-| **Output Voltage** | 5V (trimmer-adjustable) |
-| **Output Current** | 3A continuous |
-| **Conversion Efficiency** | ~95% typical |
-| **Ripple Voltage** | < 50mV |
-| **Function** | Regulates LiPo discharge curve (12.6V→10.5V) to stable 5V |
-| **Why needed** | LiPo voltage drops 2.1V from full to depleted — servo speed and sensor behavior would change without regulation |
+</div>
+
 
 #### Full Power Budget
 
