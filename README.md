@@ -109,7 +109,7 @@ Both challenges are Time Attack format — one vehicle at a time, scored on laps
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="v-photos/labeled.jpeg" width="720" height="250">
+      <img src="schemes/isometric_1.jpg" width="720" height="250">
     </td>
   </tr>
 </table>
