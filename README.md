@@ -57,6 +57,20 @@ WRO 2026 Future Engineers is a self-driving car challenge where an autonomous ro
 **Open Challenge** — Complete three laps on a track with randomly configured internal walls. No traffic signs are present. The lane width changes per section (1000 mm or 600 mm). The goal is to navigate cleanly and quickly, stopping autonomously in the starting section after three laps.
 
 **Obstacle Challenge** — Complete three laps while obeying red and green traffic sign pillars (red = keep right, green = keep left). After completing all three laps, the vehicle must identify the magenta-bordered parking lot and execute a parallel park within it. The parking space is exactly 1.5× the robot's length, and touching the magenta boundaries instantly ends the round.
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center"><b>Open Challenge</b></td>
+    <td align="center"><b>Obstcale Challenge</b></td>
+  </tr>
+  <tr>
+    <td><img src="others/open_overview.png" width="400" height="800"></td>
+    <td><img src="others/obs_oveview.png" width="400" height="800"></td>
+  </tr>
+</table>
+
+</div>
 
 Both challenges are Time Attack format — one vehicle at a time, scored on laps completed, traffic sign compliance, stopping position, and parking success.
 
@@ -131,7 +145,6 @@ One of the most significant engineering decisions was designing and manufacturin
 
 </div>
 
-#### PCB Bill of Materials (BOM)
 
 
 **PCB Power Rails:**
