@@ -744,6 +744,20 @@ This prevents the servo from steering the wrong way when crossing the 0°/360° 
 
 ## 🚧 Obstacle Challenge — Strategy & Logic
 
+<div align="center">
+
+<table>
+    <tr>
+    <td colspan="2" align="center"><b>Obstacle Simulation</b></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="others/obstacle.gif" width="600" height="500">
+    </td>
+  </tr>
+</table>
+
+</div>
 ### Full State Machine
 
 ```
