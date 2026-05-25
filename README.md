@@ -65,8 +65,8 @@ WRO 2026 Future Engineers is a self-driving car challenge where an autonomous ro
     <td align="center"><b>Obstcale Challenge</b></td>
   </tr>
   <tr>
-    <td><img src="others/open_overview.png" width="400" height="600"></td>
-    <td><img src="others/obs_oveview.png" width="400" height="600"></td>
+    <td><img src="others/open_overview.png" width="400" height="500"></td>
+    <td><img src="others/obs_oveview.png" width="400" height="500"></td>
   </tr>
 </table>
 
