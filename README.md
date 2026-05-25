@@ -12,7 +12,7 @@
 
 ---
 
-## 📚 Table of Contents
+## 📚 Table of Contents 
 
 - [👥 The Team](#-the-team)
 - [🎯 Challenge Overview](#-challenge-overview)
