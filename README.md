@@ -323,7 +323,7 @@ Additionally, the Ackermann tie-rod linkage introduced mechanical play and backl
 We replaced the Ackermann linkage with a **single-pivot front steering mechanism**. In this design, the entire front axle assembly rotates as a single unit around a central vertical pivot point. The DS3235 servo's output horn is directly coupled to this pivot via a rigid arm — there are no tie rods, no independent wheel knuckles, and no mechanical intermediate linkage.
 
 This design has a fundamentally different geometric characteristic: both front wheels turn at **the same angle simultaneously**, which technically produces some inner-wheel scrub during turns. However, for our robot's weight (~1.8 kg) and wheel material (rubber-compound RC car tyres), this scrub force is negligible and does not affect directional stability. The critical advantage gained is a **dramatically reduced minimum turning radius** — because the full 0°–180° servo range directly translates to front axle rotation, we can command extreme steering angles that Ackermann tie-rod geometry physically cannot achieve without binding.
-<div>
+<div align="center">
 
 <table>
     <tr>
@@ -331,7 +331,7 @@ This design has a fundamentally different geometric characteristic: both front w
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="schemes/steering.gif" width="600" height="500">
+      <img src="schemes/steering.gif" width="350" height="500">
     </td>
   </tr>
 </table>
