@@ -631,6 +631,32 @@ The `multiplier` parameter scales aggressiveness: `1.0` for normal wall-followin
 ## 🤖 Object Detection Model — MobileNet SSD + Edge TPU
 
 ### Dataset Collection & Labelling
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center"><b>(a)</b></td>
+    <td align="center"><b>(b)</b></td>
+    <td align="center"><b>(c)</b></td>
+  </tr>
+  <tr>
+    <td><img src="others/dataset_samples/1.png" width="200"></td>
+    <td><img src="others/dataset_samples/2.png" width="200"></td>
+    <td><img src="others/dataset_samples/3.png" width="200"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(d)</b></td>
+    <td align="center"><b>(e)</b></td>
+    <td align="center"><b>(f)</b></td>
+  </tr>
+  <tr>
+    <td><img src="others/dataset_samples/4.png" width="200"></td>
+    <td><img src="others/dataset_samples/5.png" width="200"></td>
+    <td><img src="others/dataset_samples/6.png" width="200"></td>
+  </tr>
+</table>
+
+</div>
 
 Our training dataset was built entirely from real-world competition images captured on the WRO game mat under varied lighting conditions. The dataset was managed on **Roboflow**, where we manually classified and annotated every image with bounding boxes across three classes:
 
