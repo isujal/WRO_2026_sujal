@@ -925,8 +925,8 @@ The PD controller (kp_e = 3, kd_e = 40) minimises position error. At the start o
     <td align="center"><b>Avoidance Logic</b></td>
   </tr>
   <tr>
-    <td><img src="schemes/ROI.png" width="350"></td>
-    <td><img src="schemes/obstacle_pov.gif" width="350"></td>
+    <td><img src="schemes/ROI.png-" width="350"></td>
+    <td><img src="schemes/obstacle_pov.gif-" width="350"></td>
   </tr>
 </table>
 
