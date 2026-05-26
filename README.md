@@ -670,7 +670,7 @@ Our training dataset was built entirely from real-world competition images captu
 
 Each image was individually labelled with tight bounding boxes around the pillar or marker. After labelling, the dataset was exported from Roboflow in **TFRecord format** (the required format for TensorFlow Object Detection API training).
 
-<div>
+<div align="centre">
 
 <table>
     <tr>
@@ -684,6 +684,8 @@ Each image was individually labelled with tight bounding boxes around the pillar
 </table>
 
 </div>
+
+The dataset was split into train, validation, and test sets using Roboflow's automated split — typically 83% training, 8% validation, and 9% test. The training set was used for gradient updates, the validation set monitored for overfitting during training, and the held-out test set provided a final unbiased accuracy benchmark before exporting to TFRecord format for the TensorFlow Object Detection API.
 
 <!-- DIAGRAM SUGGESTION:
      ▸ others/dataset_samples.jpg — a 3×3 or 4×4 grid of annotated images from Roboflow
