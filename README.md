@@ -683,16 +683,17 @@ Our training dataset was built entirely from real-world competition images captu
 
 Each image was individually labelled with tight bounding boxes around the pillar or marker. After labelling, the dataset was exported from Roboflow in **TFRecord format** (the required format for TensorFlow Object Detection API training).
 
-<div align="centre">
+
+<div align="center">
 
 <table>
-    <tr>
-    <td colspan="2" align="center"><b>Roboflow Split</b></td>
+  <tr>
+    <td align="center"><b>Roboflow Split</b></td>
+    <td align="center"><b>Detection Sample</b></td>
   </tr>
   <tr>
-    <td colspan="2" align="center">
-      <img src="others/roboflow_split.png" width="500" height="500">
-    </td>
+    <td><img src="others/roboflow_split.png" width="350"></td>
+    <td><img src="schemes/detection_example.png" width="350"></td>
   </tr>
 </table>
 
@@ -916,7 +917,20 @@ elif lane == 3 and orange_flag: error = (setPoint - 100) - x
 The PD controller (kp_e = 3, kd_e = 40) minimises position error. At the start of each new section, TFmini readings snap the position estimate back to a wall-referenced coordinate (`reset_coordinates`), preventing drift accumulation across laps.
 
 ### Pillar Avoidance Logic
+<div align="center">
 
+<table>
+  <tr>
+    <td align="center"><b>Region Of Interest</b></td>
+    <td align="center"><b>Avoidance Logic</b></td>
+  </tr>
+  <tr>
+    <td><img src="schemes/ROI.png" width="350"></td>
+    <td><img src="schemes/obstacle_pov.gif" width="350"></td>
+  </tr>
+</table>
+
+</div>
 `setPoint` shifts gradually (±1 unit per control loop iteration) rather than instantly, preventing servo overloading:
 
 ```python
