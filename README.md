@@ -637,7 +637,7 @@ The `multiplier` parameter scales aggressiveness: `1.0` for normal wall-followin
 
   <tr>
     <td><img src="others/dataset_samples/1.png" width="200"></td>
-    <td><img src="others/dataset_samples/2.png" width="200"></td>
+    <td><img src="others/dataset_samples/6.png" width="200"></td>
     <td><img src="others/dataset_samples/3.png" width="200"></td>
   </tr>
   <tr>
@@ -649,7 +649,7 @@ The `multiplier` parameter scales aggressiveness: `1.0` for normal wall-followin
   <tr>
     <td><img src="others/dataset_samples/4.png" width="200"></td>
     <td><img src="others/dataset_samples/5.png" width="200"></td>
-    <td><img src="others/dataset_samples/6.png" width="200"></td>
+    <td><img src="others/dataset_samples/2.png" width="200"></td>
   </tr>
   <tr>
     <td align="center"><b>(d)</b></td>
@@ -669,6 +669,21 @@ Our training dataset was built entirely from real-world competition images captu
 | `pink` | Magenta parking lot boundary marker | 🟣 Pink/Magenta |
 
 Each image was individually labelled with tight bounding boxes around the pillar or marker. After labelling, the dataset was exported from Roboflow in **TFRecord format** (the required format for TensorFlow Object Detection API training).
+
+<div>
+
+<table>
+    <tr>
+    <td colspan="2" align="center"><b>Roboflow Split</b></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="others/roboflow_split.png" width="500" height="500">
+    </td>
+  </tr>
+</table>
+
+</div>
 
 <!-- DIAGRAM SUGGESTION:
      ▸ others/dataset_samples.jpg — a 3×3 or 4×4 grid of annotated images from Roboflow
